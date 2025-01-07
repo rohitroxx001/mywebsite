@@ -1,4 +1,7 @@
 <?php 
+
+$registration = $_GET['registration'];
+
 $servername = "localhost"; 
 $username = "root"; 
 $password = "root"; 
@@ -14,7 +17,7 @@ if ($conn->connect_error) {
  
 // Example of handling a GET request 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') { 
-    $sql = "SELECT * FROM movie"; 
+    $sql = "SELECT * FROM movie where name='$registration'"; 
     $result = $conn->query($sql); 
  
     $data = []; 

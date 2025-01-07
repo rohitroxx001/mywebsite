@@ -3,7 +3,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
         <input id="inputsearch" type="search"  onkeyup="searchfunction()"/>
-
+        <br>
         <label id="labelsearch">check</label>
 
         <script>
@@ -16,6 +16,7 @@
                         url: 'test.php', 
                         type: 'GET', 
                         dataType: 'json', 
+                        data: {registration: a},
                         success: function(data) { 
                             console.log(data); // Handle the data returned from the server 
                             $("#labelsearch").html(data);
@@ -23,12 +24,13 @@
 
 
                         }, 
-                        error: function(xhr, status, error) { 
-                            console.error('Error: ' + error); 
-                        } 
+                        
                         }); 
     }
         </script>
+        <script>
+            </script>
+
 
     </body>
 </html>
